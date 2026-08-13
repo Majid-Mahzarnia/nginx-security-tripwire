@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="700" y="55" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#1e3a5f">Nginx Security Tripwire — Architecture Overview</text>
+<rect x="500" y="90" width="400" height="70" rx="14" fill="#f8fafc" stroke="#2f5f86" stroke-width="2"/>
+<text x="700.0" y="125.0" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#1f2937">Internet / Client</text>
+<line x1="700" y1="160" x2="700" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="500" y="210" width="400" height="75" rx="14" fill="#dbeafe" stroke="#2f5f86" stroke-width="2"/>
+<text x="700.0" y="247.5" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#1f2937">Nginx HTTPS Virtual Host</text>
+<line x1="700" y1="285" x2="700" y2="340" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="500" y="340" width="400" height="75" rx="14" fill="#bfdbfe" stroke="#2f5f86" stroke-width="2"/>
+<text x="700.0" y="377.5" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#1f2937">Security Pre-Gate</text>
+<line x1="700" y1="415" x2="200" y2="500" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="90" y="500" width="220" height="75" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="200.0" y="537.5" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#1f2937">Scanner / Crawler</text>
+<line x1="700" y1="415" x2="440" y2="500" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="330" y="500" width="220" height="75" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="440.0" y="537.5" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#1f2937">Canary Detection</text>
+<line x1="700" y1="415" x2="680" y2="500" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="570" y="500" width="220" height="75" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="680.0" y="537.5" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#1f2937">Impossible URI</text>
+<line x1="700" y1="415" x2="920" y2="500" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="810" y="500" width="220" height="75" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="920.0" y="537.5" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#1f2937">Quarantine</text>
+<line x1="700" y1="415" x2="1160" y2="500" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="1050" y="500" width="220" height="75" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="1160.0" y="537.5" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#1f2937">Candidate Logging</text>
+<line x1="700" y1="415" x2="700" y2="640" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="500" y="640" width="400" height="75" rx="14" fill="#ecfdf5" stroke="#2f855a" stroke-width="2"/>
+<text x="700.0" y="677.5" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#1f2937">Existing Application / Static Site</text>
+<line x1="1160" y1="575" x2="1160" y2="700" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="1040" y="700" width="240" height="75" rx="14" fill="#fff7ed" stroke="#c2410c" stroke-width="2"/>
+<text x="1160.0" y="737.5" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#1f2937">Security Dashboard</text>
+</svg>

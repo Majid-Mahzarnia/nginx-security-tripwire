@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="650" viewBox="0 0 1450 650"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="725" y="55" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#1e3a5f">Automatic Installation Flow</text>
+<rect x="30" y="250" width="135" height="80" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="97.5" y="290.0" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" fill="#1f2937">Download / Extract</text>
+<line x1="165" y1="290" x2="183" y2="290" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="185" y="250" width="135" height="80" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="252.5" y="290.0" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" fill="#1f2937">Add Install Marker</text>
+<line x1="320" y1="290" x2="338" y2="290" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="340" y="250" width="135" height="80" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="407.5" y="290.0" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" fill="#1f2937">Run install.sh</text>
+<line x1="475" y1="290" x2="493" y2="290" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="495" y="250" width="135" height="80" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="562.5" y="290.0" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" fill="#1f2937">Backup VHost</text>
+<line x1="630" y1="290" x2="648" y2="290" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="650" y="250" width="135" height="80" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="717.5" y="290.0" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" fill="#1f2937">Generate Random Canaries</text>
+<line x1="785" y1="290" x2="803" y2="290" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="805" y="250" width="135" height="80" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="872.5" y="290.0" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" fill="#1f2937">Create Config &amp; Data</text>
+<line x1="940" y1="290" x2="958" y2="290" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="960" y="250" width="135" height="80" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="1027.5" y="290.0" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" fill="#1f2937">nginx -t</text>
+<line x1="1095" y1="290" x2="1113" y2="290" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="1115" y="250" width="135" height="80" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="1182.5" y="290.0" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" fill="#1f2937">Administrator Reload</text>
+<line x1="1250" y1="290" x2="1268" y2="290" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="1270" y="250" width="135" height="80" rx="14" fill="#eff6ff" stroke="#2f5f86" stroke-width="2"/>
+<text x="1337.5" y="290.0" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" fill="#1f2937">Run Validation Tests</text>
+</svg>

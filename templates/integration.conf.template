@@ -1,0 +1,82 @@
+# NGINX-SECURITY-TRIPWIRE-BEGIN
+
+# Force quarantine before normal handling
+if ($__NS___force_quarantine) {
+    return 420;
+}
+
+error_page 420 =403 @__NS___quarantine_reject;
+
+location @__NS___quarantine_reject {
+    internal;
+    include __REJECT_FILE__;
+}
+
+# Security pre-gate
+if ($__NS___security_reject_trigger) {
+    return 419;
+}
+
+if ($__NS___tripwire_trigger) {
+    return 418;
+}
+
+error_page 419 =403 @__NS___security_reject;
+
+location @__NS___security_reject {
+    internal;
+    include __REJECT_FILE__;
+}
+
+error_page 418 =403 @__NS___tripwire;
+
+location @__NS___tripwire {
+    internal;
+
+    add_header Set-Cookie
+        "__COOKIE_NAME__=$__NS___next_level; Max-Age=$__NS___next_seconds; Path=/; Secure; HttpOnly; SameSite=Strict"
+        always;
+
+    include __REJECT_FILE__;
+}
+
+access_log __CANDIDATES_FILE__
+    __NS___blacklist_candidate
+    if=$__NS___candidate_log;
+
+location = /security {
+    return 301 /security/;
+}
+
+location = /security/ {
+    root __WEB_ROOT__;
+    try_files /index.html =404;
+
+    types { }
+    default_type text/html;
+    charset utf-8;
+
+    include __SECURITY_HEADERS__;
+
+    add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0" always;
+    add_header Pragma "no-cache" always;
+    add_header Expires "0" always;
+    add_header X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex" always;
+}
+
+location = /__CANDIDATE_ENDPOINT__ {
+    alias __CANDIDATES_FILE__;
+
+    types { }
+    default_type text/plain;
+    charset utf-8;
+
+    include __SECURITY_HEADERS__;
+
+    add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0" always;
+    add_header Pragma "no-cache" always;
+    add_header Expires "0" always;
+    add_header X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex" always;
+}
+
+# NGINX-SECURITY-TRIPWIRE-END

@@ -1,0 +1,41 @@
+# Add these maps once inside the Nginx http {} context if you do not already have equivalents.
+
+map $http_user_agent $bad_bot {
+    default 0;
+
+    ~*(sqlmap|nikto|nmap|masscan|zgrab|zmap) 1;
+    ~*(acunetix|netsparker|invicti|nessus|openvas) 1;
+    ~*(burp|burpsuite|zaproxy|owasp.?zap) 1;
+    ~*(skipfish|arachni|w3af|webscarab|paros) 1;
+    ~*(dirbuster|gobuster|dirb|ffuf|feroxbuster) 1;
+    ~*(wfuzz|dirsearch|hakrawler|katana) 1;
+    ~*(wpscan|joomscan|droopescan) 1;
+    ~*(hydra|medusa|patator) 1;
+    ~*(httpx|httprobe|whatweb) 1;
+    ~*(subfinder|assetfinder|amass) 1;
+}
+
+map $http_user_agent $crawler_bot {
+    default 0;
+
+    "" 1;
+    ~*(googlebot|googleother|google-inspectiontool) 1;
+    ~*(bingbot|bingpreview|msnbot) 1;
+    ~*(duckduckbot|baiduspider|yandexbot|yandeximages) 1;
+    ~*(ahrefsbot|semrushbot|mj12bot|dotbot) 1;
+    ~*(gptbot|oai-searchbot|chatgpt-user) 1;
+    ~*(claudebot|claude-web|anthropic-ai) 1;
+    ~*(perplexitybot|ccbot|cohere-ai) 1;
+    ~*(crawler|spider|scraper) 1;
+}
+
+map $request_uri $scanner_uri {
+    default 0;
+
+    ~*^/(wp-admin|wp-login\.php|wp-config\.php) 1;
+    ~*^/(xmlrpc\.php|phpmyadmin|pma|adminer) 1;
+    ~*^/(cgi-bin|HNAP1|vendor/phpunit) 1;
+    ~*^/(actuator|console|server-status) 1;
+    ~*^/(debug|_debugbar|telescope) 1;
+    ~*^/(swagger|swagger-ui|api-docs|openapi\.json) 1;
+}

@@ -18,6 +18,34 @@ A lightweight defensive security layer for Nginx that adds:
 
 > This project is designed to sit in front of an existing Nginx-served application. It does not replace application security controls, WAF/IPS, authentication, authorization, rate limiting, or host firewall rules.
 
+
+## Visual overview
+
+### Architecture
+
+![Architecture overview](docs/images/architecture.svg)
+
+### Detection and response
+
+![Detection and response flow](docs/images/detection-flow.svg)
+
+### Detection policy
+
+![Detection policy matrix](docs/images/policy-matrix.svg)
+
+### File and data dependencies
+
+![Dependency map](docs/images/dependency-map.svg)
+
+### Automatic installation
+
+![Installation flow](docs/images/install-flow.svg)
+
+### Safe uninstall
+
+![Uninstall flow](docs/images/uninstall-flow.svg)
+
+
 ## Requirements
 
 - Linux

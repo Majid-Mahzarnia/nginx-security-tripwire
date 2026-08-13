@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.0] - 2026-08-13
+
+### Added
+
+- Visual architecture documentation
+- Detection flow diagram
+- Detection policy matrix
+- File dependency map
+- Installation flow diagram
+- Uninstall / rollback flow diagram
+
 ## [1.0.0] - 2026-08-13
 
 ### Added
