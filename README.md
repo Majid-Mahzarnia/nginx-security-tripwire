@@ -215,3 +215,8 @@ Never publish:
 ## License
 
 MIT
+
+
+## GitHub SVG rendering
+
+The included SVG documentation diagrams are XML-safe and render directly in GitHub Markdown.

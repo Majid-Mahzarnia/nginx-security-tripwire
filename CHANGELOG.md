@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1] - 2026-08-13
+
+### Fixed
+
+- Fixed XML escaping in SVG diagram titles so GitHub can render embedded diagrams correctly.
+
+
 ## [1.1.0] - 2026-08-13
 
 ### Added
