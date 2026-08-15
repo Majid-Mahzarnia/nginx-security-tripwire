@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.2 - 2026-08-15
+
+- Added `bin/reset-security-dashboard.sh`.
+- Added safe timestamped backup before dashboard-history reset.
+- Rebuilds attacker data and dashboard after reset.
+- Preserves the existing project structure and configuration.
+
 ## [1.1.1] - 2026-08-13
 
 ### Fixed
